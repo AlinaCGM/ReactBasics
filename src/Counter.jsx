@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Counter = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
   
   const handleIncrement = () => {
       setCount(count +1);
@@ -17,5 +17,20 @@ const Counter = () => {
         </React.Fragment>
     )
 };
+/*  
+ second way to write the same code!!!
 
+
+ 
+const [count, setCount] = useState(0);
+  
+}
+    return (
+        <React.Fragment>
+            <p>The count is: {count}</p>
+            <button onClick= {() => setCount(count +1)}>Increment</button>
+            <button onClick={() => setCount(count -1)}</button>
+        </React.Fragment>
+    )
+};  */ 
 export default Counter;
